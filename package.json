@@ -1,0 +1,36 @@
+{
+  "name": "jiangnan-science-play",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "CC-BY-4.0",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "test": "node --test src/contents/*.test.ts tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:browser": "node tests/browser.mjs",
+    "qr": "node scripts/generate-qr.mjs"
+  },
+  "engines": { "node": ">=24" },
+  "dependencies": {
+    "@fontsource/ibm-plex-sans": "5.2.8",
+    "@fontsource/space-grotesk": "5.2.10",
+    "bootstrap": "5.3.8",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "@types/react": "18.3.27",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-react": "5.2.0",
+    "jsqr": "1.4.0",
+    "playwright": "1.58.2",
+    "pngjs": "7.0.0",
+    "qrcode": "1.5.4",
+    "typescript": "5.9.3",
+    "vite": "7.3.3"
+  }
+}

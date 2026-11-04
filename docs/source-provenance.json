@@ -1,0 +1,87 @@
+{
+  "wikiRepository": "https://github.com/Always-070/jiangnan-china-2026-wiki-dev",
+  "wikiCommit": "c09348690d6e084ba2e2a21b5a9ee938942b988e",
+  "originalWikiFiles": [
+    {
+      "path": "LICENSE",
+      "sha256": "cc54a182cd2776819e2584e4b5f70ae41aa50953fcb78d046fbe1fc53807d2c5"
+    },
+    {
+      "path": "src/assets/strain-personality/qinglan-bay-guide.webp",
+      "sha256": "4ac122e9bdae09f6c59832a48975031a9241a45e3dbc4163e83b3232b3095ccb"
+    },
+    {
+      "path": "src/assets/strain-personality/qinglan-fah.webp",
+      "sha256": "06cfd9477ee4ac58152f4b488a4c8b0a652e36ac463d2f43f79a45eb8d228974"
+    },
+    {
+      "path": "src/assets/strain-personality/qinglan-fal.webp",
+      "sha256": "fa2a7f650992673334c69eed15baea3bd182ce90b17d875a00eb09cfecc0535b"
+    },
+    {
+      "path": "src/assets/strain-personality/qinglan-fih.webp",
+      "sha256": "ee507516c7885442b238795ebd67b50c1676a51e44862b6b584a0cae5c5d88dd"
+    },
+    {
+      "path": "src/assets/strain-personality/qinglan-fil.webp",
+      "sha256": "ac145c0b2731c070a652a23d125923feed2c8145df62dab45b38fa8a7627b60a"
+    },
+    {
+      "path": "src/assets/strain-personality/qinglan-sah.webp",
+      "sha256": "f9cf781b0979b00514200fe9104229a8cf38f08b204a448986f6f9e819455870"
+    },
+    {
+      "path": "src/assets/strain-personality/qinglan-sal.webp",
+      "sha256": "652f3a0496f1b9a576315de3f4f33f182561784f507fbfbfe8ac174377d54754"
+    },
+    {
+      "path": "src/assets/strain-personality/qinglan-sih.webp",
+      "sha256": "25b0df526b9a8164663133c5e017e28390d93dcf4cb66157f79d83bcb59e6b1c"
+    },
+    {
+      "path": "src/assets/strain-personality/qinglan-sil.webp",
+      "sha256": "a141b2539ada6b5771ff8f407a6b5d476b1c9ad3c56918f2dff61a749e5b9cc2"
+    },
+    {
+      "path": "src/contents/steroid-tile-atlas-game.test.ts",
+      "sha256": "1b68a54fb7a6885e8845c2ecdc6373db59e4ba2d57e0f3bcad1988a2e934882f"
+    },
+    {
+      "path": "src/contents/steroid-tile-atlas-game.ts",
+      "sha256": "c0ad6465c3858bac0692f10fd791ec6682d926abf3bbba8732acafb9645ea424"
+    },
+    {
+      "path": "src/contents/steroid-tile-atlas.css",
+      "sha256": "8959f487e59fe200f66ede13e4028dd25b7bf7e9f2e7af05bb58e2e9121e0ac1"
+    },
+    {
+      "path": "src/contents/steroid-tile-atlas.tsx",
+      "sha256": "68ce3e5ec85005b76ebf701be63968db2efef9214c1bb9205abb71a0c744a937"
+    },
+    {
+      "path": "src/contents/strain-personality-data.test.ts",
+      "sha256": "2a21d1c76a7356433b8f84527a3de210675e19ded21ff566acdf7f92b57292e7"
+    },
+    {
+      "path": "src/contents/strain-personality-data.ts",
+      "sha256": "ace0ff037864480023c072a4dae921033be9771039a4226568cb588207e8d4f3"
+    },
+    {
+      "path": "src/contents/strain-personality-scoring.test.ts",
+      "sha256": "6da785d587d5da704d8b30e0c8e870cb55f609b36efcb17ddb566d52bbcaab61"
+    },
+    {
+      "path": "src/contents/strain-personality-scoring.ts",
+      "sha256": "108024ec2e6866095ed2ea6abc8c888aa85639bfe24886b5e0d731c19c4af8e8"
+    },
+    {
+      "path": "src/contents/strain-personality.css",
+      "sha256": "f4698d030d03717ef64d30a33c3681683dd1f1ceca81a17f4b7ed2ba3ebe9909"
+    },
+    {
+      "path": "src/contents/strain-personality.tsx",
+      "sha256": "88b78555c65b48daa1e9e1e93eef13712cb711d7cddde70be1f9bf7e831aaef6"
+    }
+  ],
+  "original2048SHA256": "f84b50ae4a8242887dd56f1fab63350443dc8ed6fe97d0a78a92e605ea62c6d2"
+}
