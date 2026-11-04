@@ -20,7 +20,6 @@ import {
 } from "./strain-personality-data.ts";
 import {
   isQuizComplete,
-  localeStorageKey,
   parseStoredLocale,
   parseStoredSession,
   scoreQuiz,
@@ -51,16 +50,12 @@ function readInitialState(): InitialState {
 }
 
 function readInitialLocale(): Locale {
-  try {
-    const stored = parseStoredLocale(
-      window.localStorage.getItem(localeStorageKey()),
-    );
-    if (stored) return stored;
-  } catch {
-    // The selected locale still works for this tab if storage is unavailable.
-  }
-
-  return navigator.language.toLowerCase().startsWith("en") ? "en" : "zh-CN";
+  // New visits start in English, even if the previous system-language default
+  // left a Chinese locale in storage. The on-page toggle remains available.
+  return (
+    parseStoredLocale(new URLSearchParams(window.location.search).get("lang")) ??
+    "en"
+  );
 }
 
 export function StrainPersonality() {
@@ -91,11 +86,6 @@ export function StrainPersonality() {
 
   useEffect(() => {
     document.documentElement.lang = locale;
-    try {
-      window.localStorage.setItem(localeStorageKey(), locale);
-    } catch {
-      setStorageAvailable(false);
-    }
   }, [locale]);
 
   useEffect(() => {

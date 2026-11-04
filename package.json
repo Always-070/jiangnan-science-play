@@ -11,7 +11,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "test:browser": "node tests/browser.mjs",
-    "qr": "node scripts/generate-qr.mjs"
+    "qr": "node scripts/generate-qr.mjs",
+    "share": "node scripts/generate-share-images.mjs"
   },
   "engines": { "node": ">=24" },
   "dependencies": {

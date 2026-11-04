@@ -157,6 +157,17 @@ try {
   const touchContext = await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,locale:'zh-CN'});
   const touch = await touchContext.newPage();
   watch(touch);
+  await touch.goto(base+'qinglan-bay/', {waitUntil:'networkidle'});
+  check('Quiz English default on Chinese device', await touch.locator('html').getAttribute('lang') === 'en');
+  await touch.evaluate(() => localStorage.setItem('strain-personality-lab:locale:v2', 'zh-CN'));
+  await touch.reload({waitUntil:'networkidle'});
+  check('Quiz old Chinese preference does not override English entry', await touch.locator('html').getAttribute('lang') === 'en');
+  await touch.goto(base+'qinglan-bay/?lang=en', {waitUntil:'networkidle'});
+  check('Quiz QR opens in English with old Chinese preference', await touch.locator('html').getAttribute('lang') === 'en');
+  await touch.getByRole('button', {name:'中文',exact:true}).click();
+  check('Quiz QR still allows Chinese toggle', await touch.locator('html').getAttribute('lang') === 'zh-CN');
+  await touch.reload({waitUntil:'networkidle'});
+  check('Quiz QR returns to English when reopened', await touch.locator('html').getAttribute('lang') === 'en');
   await touch.goto(base+'7-dhc-2048/', {waitUntil:'networkidle'});
   check('2048 English default on Chinese device', await touch.locator('html').getAttribute('lang') === 'en');
   await touch.locator('#board').scrollIntoViewIfNeeded();

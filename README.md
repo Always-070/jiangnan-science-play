@@ -8,10 +8,13 @@ Three standalone science activities from the Jiangnan-China Wiki. No sign-in, se
 | 7-DHC 2048 / 代谢合成游戏 | [Play 2048](https://always-070.github.io/jiangnan-science-play/7-dhc-2048/) | [PNG](public/qr/7-dhc-2048.png) · [SVG](public/qr/7-dhc-2048.svg) |
 | Steroid Tile Atlas / 甾体三消 | [Play matching game](https://always-070.github.io/jiangnan-science-play/steroid-tile-atlas/) | [PNG](public/qr/steroid-tile-atlas.png) · [SVG](public/qr/steroid-tile-atlas.svg) |
 
+Share-ready images with Chinese and English titles (1080 × 1440 PNG): [Qinglan Bay](public/share/qinglan-bay.png) · [7-DHC 2048](public/share/7-dhc-2048.png) · [Steroid Tile Atlas](public/share/steroid-tile-atlas.png). [Download all three](public/share/science-play-share-cards.zip). Vector SVG versions are also in `public/share/`.
+
 ## Changes from the source pages
 
 - The questionnaire and matching game run without the surrounding Wiki navigation. Original colours, illustrations, question content, scoring and matching rules are retained.
 - The questionnaire landing content is vertically centered below its language bar on desktop. Mobile pages retain their natural scrolling layout.
+- The questionnaire opens in English regardless of device language or an old cached Chinese preference. Its QR code explicitly uses `?lang=en`; the on-page 中文 / EN controls still work, and answers remain saved when switching. A new visit starts in English again. An explicit `?lang=zh-CN` link is also supported.
 - 7-DHC 2048 starts in English on a first visit. EN / 中文 switches interface text, scientific terms, controls and result messages without resetting the board. The selected language is remembered in that browser.
 - The original 2048 pointer handler captured clicks intended for buttons in its end-of-game dialog. The handler now leaves those buttons alone.
 - Fonts and the questionnaire's nine illustrations are bundled locally. The three page paths work directly on GitHub Pages, including a refresh and QR entry.
@@ -40,6 +43,8 @@ npm run test:browser
 `TEST_BASE_URL` can point to the deployed site. `TEST_ROUND` chooses the local evidence folder under ignored `output/playwright/`. The browser checks use an isolated temporary profile and cover all 24 quiz answers, results, language and progress persistence, matching-game controls, 2048 keyboard/buttons/touch, winning and full-board dialogs, 320/390 px layouts, missing resources and console errors.
 
 `npm run qr` writes 1200 px PNGs and vector SVGs and independently decodes every PNG with jsQR to verify its exact target URL. Change the base URL in `vite.config.ts` and `scripts/generate-qr.mjs` together if moving the site to a differently named repository.
+
+After regenerating QR codes, run `npm run share` with Google Chrome installed to generate the bilingual share cards. The script renders SVG layouts to PNG, checks text bounds, and decodes each full-size image and a 540 × 720 copy. Chinese text uses Microsoft YaHei or Noto Sans CJK SC from the local system. These images are committed so publication does not depend on browser/font installation in CI. Refresh the ZIP in `public/share/` after regenerating the cards.
 
 ## Publication
 
